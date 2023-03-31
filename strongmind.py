@@ -10,8 +10,6 @@ from pydantic import BaseModel
 from typing import Annotated
 models.Base.metadata.create_all(bind=engine)
 
-templates = Jinja2Templates(directory="templates")
-
 app = FastAPI()
 
 class Topping(BaseModel):
